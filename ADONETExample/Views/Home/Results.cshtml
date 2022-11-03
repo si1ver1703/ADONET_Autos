@@ -1,0 +1,21 @@
+﻿@model ADONETExample.Models.Auto>
+
+<div id="showResults">
+    <h4> Список Заказчиков </h4>
+
+    @foreach (var auto in Model)
+    {
+        <ul>
+            <li>@auto.Id</li>
+            <li>@auto.mark_auto</li>
+            <li>@auto.color_auto</li>
+            <li>@auto.date</li>
+            <li>@auto.price</li>
+            <li>@auto.type_auto</li>
+            <li>@auto.engine</li>
+            <li>@auto.isKazakstan</li>
+            <li>@auto.decs</li>
+        </ul>
+    }
+
+</div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<ADONETExample.Models.Auto>
+
+<h4>JetBrains s.r.o.</h4>
+
+@*@Html.DisplayForModel()*@
+
+<hr>
+@foreach (var auto in Model)
+{
+    <div>
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <td>@*@Model.CustomerId*@   @auto.Id</td>
+            </tr>
+            <tr>
+                <th>Моедель</th>
+                <td>@*@Model.FirstName *@ @auto.mark_auto</td>
+            </tr>
+            <tr>
+                <th>Цвет</th>
+                <td>@*Model.LastName*@ @auto.color_auto</td>
+            </tr>
+            <tr>
+                <th>Дата</th>
+                <td>@*@Model.Company*@ @auto.date< /td>
+</tr>
+            <tr>
+                <th>Цена</th>
+                <td>@*@Model.Address*@ @auto.price</td>
+            </tr>
+            <tr>
+                <th>Тип авто</th>
+                <td>@*@Model.City*@ @auto.type_auto</td>
+            </tr>
+            <tr>
+                <th>Обьем двигателя</th>
+                <td>@*@Model.State*@ @auto.engine</td>
+            </tr>
+            <tr>
+                <th>Растаможен</th>
+                <td>@*@Model.Country*@ @auto.isKazakstan</td>
+            </tr>
+            <tr>
+                <th>Описание</th>
+
+                <td>@*@Model.Phone*@    @auto.decs</td>
+            </tr>
+
+        </table>
+    </div>
+}

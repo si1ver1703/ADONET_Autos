@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ADONETExample.Models.Auto>
+
+@{
+    ViewBag.Title = "GetTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetTable</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mark_auto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.color_auto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type_auto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.engine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isKazakstan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.decs)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mark_auto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.color_auto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type_auto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.engine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isKazakstan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.decs)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
